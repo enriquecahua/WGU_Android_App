@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+
+    <EditText
+        android:id="@+id/course_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course Title"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/course_start_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Date"
+        android:datePickerMode="calendar"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <EditText
+        android:id="@+id/course_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End Date"
+        android:datePickerMode="calendar"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+
+    <EditText
+        android:id="@+id/course_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course Status"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/course__mentor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mentor name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/course_mentor_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mentor phone number"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/course_mentor_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mentor email"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/course_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course Notes"
+        android:inputType="text" />
+
+
+    <RelativeLayout
+        android:id="@+id/add_assessment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/add_assessment_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="91dp"
+            android:layout_toStartOf="@+id/button_add_course"
+            android:text="Add Assessment"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_add_assessment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_add"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/swipe_to_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="91dp"
+        android:text="swipe to delete assessment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/associated_assessments_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="-309dp"
+        tools:listitem="@layout/assessment_item" />
+
+
+
+
+
+
+
+</LinearLayout>
+
+</ScrollView>

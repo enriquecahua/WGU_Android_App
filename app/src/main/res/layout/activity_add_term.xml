@@ -1,0 +1,92 @@
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/edit_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course Title"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_start_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Date"
+        android:datePickerMode="calendar"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+
+
+    <EditText
+        android:id="@+id/edit_text_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End Date"
+        android:datePickerMode="calendar"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+
+    <RelativeLayout
+        android:id="@+id/add_courses_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/add_courses_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="91dp"
+            android:layout_toStartOf="@+id/button_add_term"
+            android:text="Add Courses"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_add_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_add"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/swipe_to_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="91dp"
+        android:text="swipe to delete course"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/associated_courses_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="-309dp"
+        tools:listitem="@layout/course_item" />
+
+
+
+
+</LinearLayout>
+
+</ScrollView>

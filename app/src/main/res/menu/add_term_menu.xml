@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.wguterms.MainActivity">
+
+    <item
+        android:id="@+id/delete_term"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete term"
+        android:tooltipText="delete term"
+         />
+
+    <item
+        android:id="@+id/save_term"
+        android:icon="@drawable/ic_save"
+        android:title="Save"
+        app:showAsAction="ifRoom" />
+</menu>

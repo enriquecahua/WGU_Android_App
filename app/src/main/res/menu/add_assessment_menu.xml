@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.wguterms.AddEditTermActivity">
+
+    <item
+        android:id="@+id/alert_assessment"
+        android:icon="@drawable/ic_alert"
+        android:title="Alert"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/save_assessment"
+        android:icon="@drawable/ic_save"
+        android:title="Save"
+        app:showAsAction="ifRoom" />
+</menu>
